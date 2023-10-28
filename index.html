@@ -10,23 +10,67 @@
   <style>
     html,
     body {
+      
       margin: 0;
       padding: 0;
       font-family: arial;
       background-color: #ededed;
     }
+
+    .democontainer {
+      min-height: 900px;
+      background-image: url('https://www.psu.edu/psu-edu-assets/images/fast-fact-headings/penn-state-advocate-harrisburg.png');
+      background-size: cover;
+      background-position: 50%, 50;
+      background-repeat: no-repeat;
+      padding: 5%;
+    }
+
+    .demowrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+
+      align-items: center;
+      max-width: 600px;
+      min-height: 150px;
+      background-color:whitesmoke;
+      margin:8px;
+    }
+
+    h3[name=demotext]{
+      margin-inline: 64px;
+      text-transform: uppercase;
+    }
+
+    
   </style>
   <title>polaris-button</title>
 </head>
 
 <body>
-  <br></br>
-  <polaris-button name = "Academics" link = 'https://www.psu.edu/news/academics/' ></polaris-button>
-  <polaris-button name ="Students" link = 'https://www.psu.edu/news/students/' active = 'true'></polaris-button>
-  <polaris-button name ="InvalidLink" link = 'https://127.0.0.1:0000/' clicked = 'true'></polaris-button>
-  <polaris-button name = "Visitors and Neighbors" link = 'https://www.psu.edu/news/visitors-and-neighbors/' darkmode = 'true'></polaris-button>
-  <polaris-button link = 'https://www.psu.edu/news/faculty-and-staff/' darkmode = 'true' active = 'true'>Faculty and Staff</polaris-button>
-
+  <div class="democontainer">
+    <div class="demowrapper">
+      <h3 name="demotext">Get the news by email</h3>
+      <polaris-button name = "Subscribe" link = 'https://www.psu.edu/news/academics/'></polaris-button>
+    </div>
+    <div class="demowrapper">
+      <h3 name="demotext">Get the news by email</h3>
+      <polaris-button name ="Students" link = 'https://www.psu.edu/news/students/' active = 'true'></polaris-button>
+    </div>
+    <div class="demowrapper">
+      <h3 name="demotext">Get the news by email</h3>
+  <polaris-button name ="InvalidLink" link = 'https://127.0.0.1:0000/' touch = 'true'></polaris-button>
+      </div>
+  <div class="demowrapper">
+    <h3 name="demotext">Get the news by email</h3>
+  <polaris-button name = "Visitors and Neighbors" link = 'https://www.psu.edu/news/visitors-and-neighbors/' dark = 'true'></polaris-button>
+</div>
+  <div class="demowrapper">
+    <h3 name="demotext">Get the news by email</h3>
+  <polaris-button link = 'https://www.psu.edu/news/faculty-and-staff/' dark = 'true' active = 'true'>Faculty and Staff</polaris-button>
+</div>
+</div>
   <script type="module" src="./src/polaris-button.js"></script>
 </body>
 </html>
